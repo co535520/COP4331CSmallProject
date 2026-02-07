@@ -22,4 +22,10 @@
 		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
+
+    function returnSearchInfo( $searchResult )
+    {
+        $retValue = '{"results":[' . $searchResult . '],"error":""}';
+        sendResultInfoAsJson( $retValue );
+    }
 ?>
