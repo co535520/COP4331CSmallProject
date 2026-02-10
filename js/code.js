@@ -1,4 +1,4 @@
-const urlBase = 'http://COP4331-5.com/LAMPAPI';
+const urlBase = 'http://64.225.16.120/LAMPAPI';
 const extension = 'php';
 
 let userId = 0;
@@ -40,6 +40,13 @@ function doRegister()
 					document.getElementById("registerResult").innerHTML = jsonObject.error;
 				}else{
 					document.getElementById("registerResult").innerHTML = "User has been registered";
+
+					userId = jsonObject.id;
+					firstName = jsonObject.firstName;
+					lastName = jsonObject.lastName;
+
+					saveCookie();
+
 					window.location.href = "color.html";
 				}
 			}
